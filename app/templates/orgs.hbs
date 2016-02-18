@@ -1,8 +1,7 @@
 <h1>Orgs</h1>
 <ul>
-    <li>{{link-to 'facebook' 'org' 'facebook'}}</li>
-    <li>{{link-to 'netflix' 'org' 'netflix'}}</li>
-    <li>{{link-to 'yahoo' 'org' 'yahoo'}}</li>
-    <li>{{link-to 'ember.js' 'org' 'ember.js'}}</li>
+    {{#each content as |org|}}
+        <li>{{link-to org.text 'org' org.id}}</li>
+    {{/each}}
 </ul>
 {{outlet}}

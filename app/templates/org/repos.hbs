@@ -1,8 +1,6 @@
 <ul>
-    <li>{{link-to 'data' 'org.repo' 'ember.js' 'data'}}</li>
-    <li>{{link-to 'website' 'org.repo' 'ember.js' 'website'}}</li>
-    <li>{{link-to 'guides' 'org.repo' 'ember.js' 'guides'}}</li>
-    <li>{{link-to 'ember.js' 'org.repo' 'ember.js' 'ember.js'}}</li>
-    <li>{{link-to 'rfcs' 'org.repo' 'ember.js' 'rfcs'}}</li>
+    {{#each content as |repo|}}
+    <li>{{link-to repo.text 'org.repo' repo.id}}</li>
+    {{/each}}
 </ul>
 {{outlet}}
