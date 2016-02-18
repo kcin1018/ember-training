@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel() {
-    this.replaceWith('orgs');
+    this.transitionTo('org.repo.issues');
   }
 });
