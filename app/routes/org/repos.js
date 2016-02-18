@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    let org = this.modelFor('org').organization;
+    let org = this.modelFor('org').login;
 
     return $.get(`https://api.github.com/orgs/${org}/repos`).then((repos) => {
       return repos.map((repo) => {

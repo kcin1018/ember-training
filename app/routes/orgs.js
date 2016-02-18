@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       { id: 'facebook', text: 'Facebook' },
       { id: 'netflix', text: 'Netflix' },
       { id: 'yahoo', text: 'Yahoo' },
-      { id: 'emberjs', text: 'Ember.js' },
+      { id: 'emberjs', text: 'Ember.js' }
     ];
   },
   actions: {
