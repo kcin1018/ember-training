@@ -2,12 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return [
-      { id: 'data', text: 'data' },
-      { id: 'website', text: 'website' },
-      { id: 'guides', text: 'guides' },
-      { id: 'ember.js', text: 'ember.js' },
-      { id: 'rfcs', text: 'rfcs' },
-    ];
+    let org = this.modelFor('org').login;
+
+    return $.get(`https://api.github.com/orgs/${org}/repos`).then((repos) => {
+      return repos.map((repo) => {
+        repo.oldId = repo.id;
+        repo.id = repo.name;
+        return repo;
+      })
+    });
   }
 });
