@@ -1,6 +1,6 @@
 <ul>
     {{#each content as |repo|}}
-    <li>{{link-to repo.text 'org.repo' repo.id}}</li>
+    <li>{{link-to repo.id 'org.repo' repo.id}}</li>
     {{/each}}
 </ul>
 {{outlet}}
