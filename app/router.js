@@ -7,14 +7,15 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('orgs');
-  this.route('org', { path: 'org/:organization'}, function() {
+  this.route('org', { path: 'org/:organization' }, function() {
     this.route('repos');
-    this.route('repo', { path: ':repo'}, function() {
+    this.route('repo', { path: ':repo' }, function() {
       this.route('issues');
       this.route('contributors');
     });
+    this.route('notfound');
   });
-  this.route('not-found', { path: '*path' });
+  this.route('notfound', { path: '*path' });
 });
 
 export default Router;
