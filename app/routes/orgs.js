@@ -12,8 +12,12 @@ export default Ember.Route.extend({
     ];
   },
   actions: {
-    favorite(org) {
-      this.get('favorites').favorite(org);
+    favoriteToggle(org) {
+      if(this.get('favorites.items').indexOf(org) === -1) {
+        this.get('favorites').favorite(org);
+      } else {
+        this.get('favorites').unfavorite(org);
+      }
     }
   }
 });
