@@ -40,7 +40,7 @@ test('setting objects modfies the component', function(assert) {
 });
 
 test('clicking the favorite button fires action', function(assert) {
-  // assert.expect(1);
+  assert.expect(2);
 
   const org = Ember.Object.create({
     id: 'test-org',
