@@ -4,6 +4,7 @@ import isInArray from 'github-ui/utils/is-in-array';
 export default Ember.Component.extend({
   favorites: Ember.inject.service(),
   tagName: 'li',
+  classNames: ['organization'],
   isFavorited: isInArray('org.id', 'favorites.items'),
   actions: {
     favorite(id) {
