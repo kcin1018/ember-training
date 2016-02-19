@@ -7,5 +7,12 @@ export default Ember.Route.extend({
       org.id = org.name;
       return org;
     })
+  },
+  actions: {
+    error(jqXhr, transition, route) {
+      if(jqXhr.status === 404) {
+        this.intermediateTransitionTo('org.not-found');
+      }
+    }
   }
 });

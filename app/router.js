@@ -13,6 +13,7 @@ Router.map(function() {
       this.route('issues');
       this.route('contributors');
     });
+    this.route('not-found');
   });
   this.route('not-found', { path: '*path' });
 });
