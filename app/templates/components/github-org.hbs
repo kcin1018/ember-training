@@ -1,2 +1,4 @@
-<span {{action 'favorite' org.id}}>[Favorite]</span>
+<span {{action 'favorite' org.id}}>
+[ {{if isFavorited 'Unfavorite' 'Favorite'}} ]
+</span>
 {{link-to org.text 'org' org.id}}
