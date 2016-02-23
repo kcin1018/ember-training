@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export function niceNumber(params/*, hash*/) {
-  const [number] = params;
+  if(Ember.isEmpty(params)) {
+    return '';
+  }
 
+  const [number] = params;
   if(number < 1000) {
     return number;
   }

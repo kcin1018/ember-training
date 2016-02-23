@@ -5,6 +5,7 @@ module('Unit | Helper | nice number');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
+  assert.equal(niceNumber([]), '', 'it returns an empty string');
   assert.equal(niceNumber([-1]), -1, 'it returns -1 from -1');
   assert.equal(niceNumber([42]), 42, 'it returns 42 from 42');
   assert.equal(niceNumber([999]), 999, 'it returns 999 from 999');
